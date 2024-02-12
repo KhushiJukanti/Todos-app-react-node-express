@@ -1,20 +1,23 @@
 const express = require("express");
 
+const ToDoModel = require("../Models/todo");
+
 const router = express.Router()
 
-const todos = [
-    // {
-    //     id:1,
-    //     taskName:"Learn React",
-    //     taskDesc:"I need to learn react by this month "
-    // },
-    // {
-    //     taskName:req.body.taskName,
-    //     taskDesc:req.body.taskDesc
-    // }
-]
+// const todos = [
+//     // {
+//     //     id:1,
+//     //     taskName:"Learn React",
+//     //     taskDesc:"I need to learn react by this month "
+//     // },
+//     // {
+//     //     taskName:req.body.taskName,
+//     //     taskDesc:req.body.taskDesc
+//     // }
+// ]
 
-router.get("/list", function (req, res) {
+router.get("/list", async function (req, res) {
+    let todos = await ToDoModel.find({});
     res.send(todos)
 })
 

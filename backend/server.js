@@ -1,5 +1,10 @@
 const express = require("express");
+var bodyParser = require("body-parser")
 const app = express();
+
+const mongoose = require("mongoose");
+// Connect to MongoDB database using Mongoose.
+mongoose.connect("mongodb://localhost:27017/Khushi_First-Mongo")
 
 const cors = require("cors")
 
