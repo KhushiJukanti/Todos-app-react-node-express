@@ -4,7 +4,7 @@ const app = express();
 
 const mongoose = require("mongoose");
 // Connect to MongoDB database using Mongoose.
-mongoose.connect("mongodb://localhost:27017/Khushi_First-Mongo")
+mongoose.connect("mongodb://localhost:27017/khushi-first-mongo")
 
 const cors = require("cors")
 
